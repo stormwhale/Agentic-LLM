@@ -15,7 +15,7 @@ A locally hosted, RAG-based stock market chatbot designed to autonomously utiliz
 * **Fallback Data Source:** [TwelveData API](https://twelvedata.com/) – Acts as an autonomous fallback for stock prices, company information, and historical data to handle AlphaVantage rate limits seamlessly.
 
 ## Getting Started (Prerequisites):
-  o run this project locally, you will need the following:
+  To run this project locally, you will need the following:
 
 1. **Local LLM Environment:** * Install [Ollama](https://ollama.com/).
    * Pull the required model by running: `ollama run qwen3:8b` (or your specific model tag).
