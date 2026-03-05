@@ -1,9 +1,13 @@
-CUNY Capstone project:
+CUNY Capstone project: (In development)
+
 Objective: 
   1. Create a locally run RAG-based stock market chatbot that can utilize tools for APIs autonomously.
   2. Ensure user privacy and cost-free.
   3. Fine balanced between performance and insightful response in stock market domain knowledge.
 LLM model and API sources:
-  1. Qwen 3 - provides a balance performance, intelligence to calling APIs, and insightful response.
+  1. Qwen 3:8B - provides a balance performance, intelligence to calling APIs, and insightful response.
   2. AlphaVantage - provides a great source of news and sentiment scores from API calls at free-tier level.
   3. TwelveData - Acts as a backup API source that covers current stock prices, company information, and historical data when AlphaVantage API limit is reached.
+User requirements:
+  1. Users are required to enter the API keys of their own to the chatbot page before use.
+  2. Users are required to download Qwen 3:8B model from ollama webstie.
