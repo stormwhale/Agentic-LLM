@@ -1,13 +1,34 @@
-CUNY Capstone project: (Work in Progress)
+# Stock Market Chatbot (SMC)
+** Status: Work in Progress (Active Development)**
 
-Objective: 
-  1. Create a locally run RAG-based stock market chatbot that can utilize tools for APIs autonomously.
-  2. Ensure user privacy and cost-free.
-  3. Fine balanced between performance and insightful response in stock market domain knowledge.
-LLM model and API sources:
-  1. Qwen 3:8B - provides a balance performance, intelligence to calling APIs, and insightful response.
-  2. AlphaVantage - provides a great source of news and sentiment scores from API calls at free-tier level.
-  3. TwelveData - Acts as a backup API source that covers current stock prices, company information, and historical data when AlphaVantage API limit is reached.
-User requirements:
-  1. Users are required to enter the API keys of their own to the chatbot page before use.
-  2. Users are required to download Qwen 3:8B model from ollama webstie.
+*This project is being developed as a Capstone Project for the M.S. in Data Science program at the CUNY School of Professional Studies.*
+
+## Objective: 
+A locally hosted, RAG-based stock market chatbot designed to autonomously utilize financial APIs. This project prioritizes:
+1. **Privacy & Cost-Efficiency:** Fully local execution ensures user data remains private, with zero inference costs.
+2. **Domain-Specific Accuracy:** Striking a fine balance between high-performance execution and insightful, financially literate responses.
+3. **Autonomous Tool Use:** The agent dynamically routes queries to the appropriate external API tools.
+
+## Architecture & Tech Stack:
+* **LLM:** [Qwen 3:8B](https://ollama.com/) – Selected for its optimal balance of performance, API-calling intelligence, and hardware efficiency for local deployment.
+* **Primary Data Source:** [AlphaVantage API](https://www.alphavantage.co/) – Provides real-time financial news and sentiment scoring (Free Tier).
+* **Fallback Data Source:** [TwelveData API](https://twelvedata.com/) – Acts as an autonomous fallback for stock prices, company information, and historical data to handle AlphaVantage rate limits seamlessly.
+
+## Getting Started (Prerequisites):
+  o run this project locally, you will need the following:
+
+1. **Local LLM Environment:** * Install [Ollama](https://ollama.com/).
+   * Pull the required model by running: `ollama run qwen3:8b` (or your specific model tag).
+2. **API Keys:** * Users must generate their own free API keys for AlphaVantage and TwelveData. 
+   * These keys will be inputted directly into the chatbot interface upon launch.
+
+## Evaluation:
+The final pipeline and LLM outputs will be rigorously evaluated using the **RAGAS (Retrieval Augmented Generation Assessment)** framework to ensure the retrieved context and generated answers meet strict quality thresholds.
+
+## 🗺️ Roadmap / Current Status
+* [x] Define architecture and select API tools
+* [x] Implement basic RAG pipeline
+* [x] Integrate AlphaVantage / TwelveData fallback logic
+* [x] Build local user interface
+* [ ] Review the need for additional functionality
+* [ ] Conduct RAGAS evaluation
