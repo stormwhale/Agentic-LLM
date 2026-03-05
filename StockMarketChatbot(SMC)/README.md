@@ -1,5 +1,5 @@
 # Stock Market Chatbot (SMC)
- ** Status: Work in Progress (Active Development)**
+ **Status: Work in Progress (Active Development)**
 
  * This project is being developed as a Capstone Project for the M.S. in Data Science program at the CUNY School of Professional Studies.*
 
