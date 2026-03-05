@@ -1,7 +1,7 @@
-#Stock Market Chatbot (SMC)
-** Status: Work in Progress (Active Development)**
+# Stock Market Chatbot (SMC)
+ ** Status: Work in Progress (Active Development)**
 
-*This project is being developed as a Capstone Project for the M.S. in Data Science program at the CUNY School of Professional Studies.*
+ * This project is being developed as a Capstone Project for the M.S. in Data Science program at the CUNY School of Professional Studies.*
 
 ## Objective: 
 A locally hosted, RAG-based stock market chatbot designed to autonomously utilize financial APIs. This project prioritizes:
@@ -26,9 +26,9 @@ A locally hosted, RAG-based stock market chatbot designed to autonomously utiliz
 The final pipeline and LLM outputs will be rigorously evaluated using the **RAGAS (Retrieval Augmented Generation Assessment)** framework to ensure the retrieved context and generated answers meet strict quality thresholds.
 
 ## 🗺️ Roadmap / Current Status
-* [x] Define architecture and select API tools
-* [x] Implement basic RAG pipeline
-* [x] Integrate AlphaVantage / TwelveData fallback logic
-* [x] Build local user interface
-* [ ] Review the need for additional functionality
-* [ ] Conduct RAGAS evaluation
+  * [x] Define architecture and select API tools
+  * [x] Implement basic RAG pipeline
+  * [x] Integrate AlphaVantage / TwelveData fallback logic
+  * [x] Build local user interface
+  * [ ] Review the need for additional functionality
+  * [ ] Conduct RAGAS evaluation
