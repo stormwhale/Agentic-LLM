@@ -10,7 +10,7 @@ A locally hosted, RAG-based stock market chatbot designed to autonomously utiliz
 3. **Autonomous Tool Use:** The agent dynamically routes queries to the appropriate external API tools.
 
 ## Architecture & Tech Stack:
-* **LLM:** [Qwen 3:8B](https://ollama.com/) – Selected for its optimal balance of performance, API-calling intelligence, and hardware efficiency for local deployment.
+* **LLM:** [Qwen 3.5:9B](https://ollama.com/) – Selected for its optimal balance of performance, API-calling intelligence, and hardware efficiency for local deployment.
 * **Primary Data Source:** [AlphaVantage API](https://www.alphavantage.co/) – Provides real-time financial news and sentiment scoring (Free Tier).
 * **Fallback Data Source:** [TwelveData API](https://twelvedata.com/) – Acts as an autonomous fallback for stock prices, company information, and historical data to handle AlphaVantage rate limits seamlessly.
 
