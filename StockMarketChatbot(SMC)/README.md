@@ -18,7 +18,7 @@ A locally hosted, RAG-based stock market chatbot designed to autonomously utiliz
   To run this project locally, you will need the following:
 
 1. **Local LLM Environment:** * Install [Ollama](https://ollama.com/).
-   * Pull the required model by running: `ollama run qwen3:8b` (or your specific model tag).
+   * Pull the required model by running: `ollama run qwen3.5:9B` (or your specific model tag).
 2. **API Keys:** * Users must generate their own free API keys for AlphaVantage and TwelveData. 
    * These keys will be inputted directly into the chatbot interface upon launch.
 
@@ -30,5 +30,5 @@ The final pipeline and LLM outputs will be rigorously evaluated using the **RAGA
   * [x] Implement basic RAG pipeline
   * [x] Integrate AlphaVantage / TwelveData fallback logic
   * [x] Build local user interface
-  * [ ] Review the need for additional functionality
-  * [ ] Conduct RAGAS evaluation
+  * [x] Review the need for additional functionality
+  * [x] Conduct DeepEval evaluation
