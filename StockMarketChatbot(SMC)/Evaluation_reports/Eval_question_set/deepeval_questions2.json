@@ -1,0 +1,183 @@
+[
+    {
+        "user_input": "What is the live price of the company that makes the Ozempic weight-loss drug?",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: get_current_price\nPurpose: Get the real-time live price of a stock or ETF. Use only for live market checks."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_current_price",
+                "arguments": {
+                    "ticker": "NVO"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    },
+    {
+        "user_input": "Are analysts feeling bullish or bearish on Boeing right now given the recent safety incidents?",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: get_news_sentiment\nPurpose: Fetch recent news and sentiment scores for a specific company or ticker."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_news_sentiment",
+                "arguments": {
+                    "ticker": "BA"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    },
+    {
+        "user_input": "What did Target's leadership say about consumer discretionary spending in their holiday quarter call (Q4 2025)?",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: get_earnings_call_transcript\nPurpose: Get the earnings call transcript for a company in a specific quarter."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_earnings_call_transcript",
+                "arguments": {
+                    "ticker": "TGT",
+                    "quarter": "2025Q4"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    },
+    {
+        "user_input": "Where did JPMorgan Chase and Goldman Sachs close yesterday?",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: get_end_of_day_price\nPurpose: Get the closing price and daily change at the end of the most recent trading day."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_end_of_day_price",
+                "arguments": {
+                    "ticker": "JPM"
+                }
+            },
+            {
+                "name": "get_end_of_day_price",
+                "arguments": {
+                    "ticker": "GS"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    },
+    {
+        "user_input": "Any breaking geopolitical news out of the Middle East affecting global oil supply or OPEC decisions?",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: get_breaking_news\nPurpose: Fetch breaking world news from Reuters, BBC, WSJ, FT. Use ONLY for active geopolitical events, crises, macro policies, or disasters."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_breaking_news",
+                "arguments": {
+                    "keywords": "Middle East global oil supply OPEC"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    },
+    {
+        "user_input": "What's the expense ratio and sector breakdown of the Russell 2000 ETF?",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: get_etf_profile\nPurpose: Get ETF-specific data including expense ratio, top holdings, and sector allocation. Never use for individual stocks."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_etf_profile",
+                "arguments": {
+                    "ticker": "IWM"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    },
+    {
+        "user_input": "How did GameStop perform historically during the first week of February 2021?",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: get_historical_data\nPurpose: Get historical price time-series data for analysis over a period of time. Returns raw data without a chart."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_historical_data",
+                "arguments": {
+                    "ticker": "GME",
+                    "interval": "1day",
+                    "start_date": "2021-02-01",
+                    "end_date": "2021-02-07"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    },
+    {
+        "user_input": "Map out the 1-year trajectory of Lockheed Martin on a chart.",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: create_plot\nPurpose: Create an interactive time series chart of historical stock data. Must be paired with get_historical_data.",
+            "Tool: get_historical_data\nPurpose: Get historical price time-series data for analysis over a period of time."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_historical_data",
+                "arguments": {
+                    "ticker": "LMT",
+                    "interval": "1day",
+                    "start_date": "2025-04-09",
+                    "end_date": "2026-04-09"
+                }
+            },
+            {
+                "name": "create_plot",
+                "arguments": {
+                    "ticker": "LMT"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    },
+    {
+        "user_input": "What sector does ASML operate in and where is their global headquarters located?",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: get_company_info\nPurpose: Get general corporate information like sector, industry, CEO, market cap, headquarters location, and business description."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_company_info",
+                "arguments": {
+                    "ticker": "ASML"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    },
+    {
+        "user_input": "What did Coca-Cola close at on New Year's Eve last year?",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: get_specific_date_price\nPurpose: Get the closing price for one specific historical date. Use when the user asks for a single point in the past (e.g., \"yesterday\", \"on Christmas 2023\")."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_specific_date_price",
+                "arguments": {
+                    "ticker": "KO",
+                    "date": "2025-12-31"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    }
+]

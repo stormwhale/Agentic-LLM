@@ -1,0 +1,236 @@
+[
+    {
+        "user_input": "If I bought 15 shares of Amazon on the first trading day of 2023, what would my exact return on investment be based on its current live price?",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: get_specific_date_price\nPurpose: Fetch a stock's closing price on a specific date or the most recent end-of-day price.",
+            "Tool: get_current_price\nPurpose: Get the real-time stock price."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_specific_date_price",
+                "arguments": {
+                    "ticker": "AMZN",
+                    "date": "2023-01-03"
+                }
+            },
+            {
+                "name": "get_current_price",
+                "arguments": {
+                    "ticker": "AMZN"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    },
+    {
+        "user_input": "Can you pull the daily historical data for AMD and Intel for the first quarter of 2024 and plot them together on a chart so I can compare their performance?",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: get_historical_data\nPurpose: Retrieves historical time-series pricing. Supports multiple tickers.",
+            "Tool: create_plot\nPurpose: Creates an interactive time series plot of historical data already in memory."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_historical_data",
+                "arguments": {
+                    "ticker": "AMD,INTC",
+                    "interval": "1day",
+                    "start_date": "2024-01-01 00:00:00",
+                    "end_date": "2024-03-31 00:00:00"
+                }
+            },
+            {
+                "name": "create_plot",
+                "arguments": {
+                    "ticker": "AMD,INTC"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    },
+    {
+        "user_input": "Give me a comprehensive overview of Netflix: I need their current market cap, the general sentiment of their recent news, and a summary of what leadership said about subscriber growth in their 2024Q1 earnings call.",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: get_company_info\nPurpose: Fetches general corporate information: sector, industry, CEO, market cap, description.",
+            "Tool: get_news_sentiment\nPurpose: Fetches sentiment scores and recent news for a SPECIFIC company.",
+            "Tool: get_earnings_call_transcript\nPurpose: Returns the earnings call transcript for a given company in a specific quarter."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_company_info",
+                "arguments": {
+                    "ticker": "NFLX"
+                }
+            },
+            {
+                "name": "get_news_sentiment",
+                "arguments": {
+                    "ticker": "NFLX"
+                }
+            },
+            {
+                "name": "get_earnings_call_transcript",
+                "arguments": {
+                    "ticker": "NFLX",
+                    "quarter": "2024Q1"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    },
+    {
+        "user_input": "Compare the expense ratios and top 3 holdings of SPY, VOO, and IVV. Which one is objectively the cheapest to hold?",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: get_etf_profile\nPurpose: Fetches ETF profile: index tracked, expense ratio, holdings, and asset allocation."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_etf_profile",
+                "arguments": {
+                    "ticker": "SPY,VOO,IVV"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    },
+    {
+        "user_input": "Pull Meta's earnings call transcript from 2023Q4. What were Mark Zuckerberg's specific comments regarding capital expenditures on AI infrastructure?",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: get_earnings_call_transcript\nPurpose: Returns the earnings call transcript for a given company in a specific quarter."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_earnings_call_transcript",
+                "arguments": {
+                    "ticker": "META",
+                    "quarter": "2023Q4"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    },
+    {
+        "user_input": "Can you check the general market news for the 'life_sciences' topic and tell me if there are any recent articles explicitly mentioning CRISPR or gene editing?",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: get_general_news\nPurpose: Fetches FINANCIAL MARKET NEWS with sentiment from analyst and finance sources."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_general_news",
+                "arguments": {
+                    "topics": "life_sciences",
+                    "keywords": "CRISPR gene editing"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    },
+    {
+        "user_input": "What are the latest developments regarding the central bank interest rate decisions in Europe, and how is it impacting the broader economy?",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: get_general_news\nPurpose: Fetches FINANCIAL MARKET NEWS with sentiment from analyst and finance sources."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_general_news",
+                "arguments": {
+                    "topics": "economy_monetary",
+                    "keywords": "Europe central bank interest rate"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    },
+    {
+        "user_input": "Are there any breaking news reports out right now regarding supply chain disruptions or shipping attacks in the Red Sea?",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: get_breaking_news\nPurpose: Fetches BREAKING NEWS from premium journalism sources (Reuters, BBC, WSJ, FT)."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_breaking_news",
+                "arguments": {
+                    "keywords": "Red Sea shipping attacks supply chain"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    },
+    {
+        "user_input": "Who is the current CEO of Palantir, and what is the overall news sentiment around the company over the last 48 hours?",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: get_company_info\nPurpose: Fetches general corporate information: sector, industry, CEO, market cap, description.",
+            "Tool: get_news_sentiment\nPurpose: Fetches sentiment scores and recent news for a SPECIFIC company."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_company_info",
+                "arguments": {
+                    "ticker": "PLTR"
+                }
+            },
+            {
+                "name": "get_news_sentiment",
+                "arguments": {
+                    "ticker": "PLTR"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    },
+    {
+        "user_input": "What was the closing price of Microsoft on Christmas Day last year?",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: get_specific_date_price\nPurpose: Fetch a stock's closing price on a specific date or the most recent end-of-day price."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_specific_date_price",
+                "arguments": {
+                    "ticker": "MSFT",
+                    "date": "2025-12-25"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    },
+    {
+        "user_input": "What is the current stock price, market cap, and news sentiment for a company called XYZCorpFakeTicker?",
+        "response": null,
+        "retrieved_contexts": [
+            "Tool: get_current_price\nPurpose: Get the real-time stock price.",
+            "Tool: get_company_info\nPurpose: Fetches general corporate information: sector, industry, CEO, market cap, description.",
+            "Tool: get_news_sentiment\nPurpose: Fetches sentiment scores and recent news for a SPECIFIC company."
+        ],
+        "reference_tool_calls": [
+            {
+                "name": "get_current_price",
+                "arguments": {
+                    "ticker": "XYZCorpFakeTicker"
+                }
+            },
+            {
+                "name": "get_company_info",
+                "arguments": {
+                    "ticker": "XYZCorpFakeTicker"
+                }
+            },
+            {
+                "name": "get_news_sentiment",
+                "arguments": {
+                    "ticker": "XYZCorpFakeTicker"
+                }
+            }
+        ],
+        "actual_tool_calls": []
+    }
+]

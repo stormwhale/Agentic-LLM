@@ -1,0 +1,150 @@
+[
+  {
+    "user_input": "What is Nvidia's market cap, and can you tell me which sector and industry it belongs to?",
+    "response": null,
+    "retrieved_contexts": [
+      "\n        Tool: get_company_info\n        Purpose: Get general corporate information like sector, industry, CEO, market cap,\n        headquarters, number of employees, and business description.\n\n        Example conversations:\n        User: What's the total market cap of Netflix?\n        Assistant: [{\"name\": \"get_company_info\", \"arguments\": {\"ticker\": \"NFLX\"}}]\n\n        User: Who is the CEO of Amazon?\n        Assistant: [{\"name\": \"get_company_info\", \"arguments\": {\"ticker\": \"AMZN\"}}]\n\n        User: What industry is Palantir in?\n        Assistant: [{\"name\": \"get_company_info\", \"arguments\": {\"ticker\": \"PLTR\"}}]\n\n        User: Tell me about Nvidia as a company.\n        Assistant: [{\"name\": \"get_company_info\", \"arguments\": {\"ticker\": \"NVDA\"}}]\n\n        User: Where is Apple headquartered?\n        Assistant: [{\"name\": \"get_company_info\", \"arguments\": {\"ticker\": \"AAPL\"}}]\n\n        User: How many employees does Tesla have?\n        Assistant: [{\"name\": \"get_company_info\", \"arguments\": {\"ticker\": \"TSLA\"}}]\n\n        User: What does Palantir actually do as a business?\n        Assistant: [{\"name\": \"get_company_info\", \"arguments\": {\"ticker\": \"PLTR\"}}]\n\n        User: Is Microsoft a tech company or a cloud company?\n        Assistant: [{\"name\": \"get_company_info\", \"arguments\": {\"ticker\": \"MSFT\"}}]\n        "
+    ],
+    "reference_tool_calls": [
+      {
+        "name": "get_company_info",
+        "arguments": {
+          "ticker": "NVDA"
+        }
+      }
+    ],
+    "actual_tool_calls": []
+  },
+  {
+    "user_input": "What are VOO's expense ratio, top holdings, and sector allocation?",
+    "response": null,
+    "retrieved_contexts": [
+      "\n        Tool: get_etf_profile\n        Purpose: Get ETF-specific data including expense ratio, top holdings, and sector allocation.\n        Use ONLY for ETFs like VOO, QQQ, SPY, QQQM, IWM. Never for individual stocks.\n\n        Example conversations:\n        User: What sector does VOO track?\n        Assistant: [{\"name\": \"get_etf_profile\", \"arguments\": {\"ticker\": \"VOO\"}}]\n\n        User: What are the top holdings in VOO?\n        Assistant: [{\"name\": \"get_etf_profile\", \"arguments\": {\"ticker\": \"VOO\"}}]\n\n        User: What is QQQ's expense ratio?\n        Assistant: [{\"name\": \"get_etf_profile\", \"arguments\": {\"ticker\": \"QQQ\"}}]\n\n        User: What index does SPY track?\n        Assistant: [{\"name\": \"get_etf_profile\", \"arguments\": {\"ticker\": \"SPY\"}}]\n\n        User: Compare VOO and QQQ expense ratios.\n        Assistant: [{\"name\": \"get_etf_profile\", \"arguments\": {\"ticker\": \"VOO, QQQ\"}}]\n\n        User: What sectors does IWM invest in?\n        Assistant: [{\"name\": \"get_etf_profile\", \"arguments\": {\"ticker\": \"IWM\"}}]\n        "
+    ],
+    "reference_tool_calls": [
+      {
+        "name": "get_etf_profile",
+        "arguments": {
+          "ticker": "VOO"
+        }
+      }
+    ],
+    "actual_tool_calls": []
+  },
+  {
+    "user_input": "What was TSLA's closing price today, and what was its daily price change?",
+    "response": null,
+    "retrieved_contexts": [
+      "\n        Tool: get_end_of_day_price\n        Purpose: Get the closing price and daily change at end of trading day.\n\n        Example conversations:\n        User: What was Apple's end of day price today?\n        Assistant: [{\"name\": \"get_end_of_day_price\", \"arguments\": {\"ticker\": \"AAPL\"}}]\n\n        User: How did NVDA perform at close?\n        Assistant: [{\"name\": \"get_end_of_day_price\", \"arguments\": {\"ticker\": \"NVDA\"}}]\n\n        User: What was the daily change percentage for AMD today?\n        Assistant: [{\"name\": \"get_end_of_day_price\", \"arguments\": {\"ticker\": \"AMD\"}}]\n\n        User: Did SPY close higher or lower today?\n        Assistant: [{\"name\": \"get_end_of_day_price\", \"arguments\": {\"ticker\": \"SPY\"}}]\n\n        User: What was META's closing price on Friday?\n        Assistant: [{\"name\": \"get_end_of_day_price\", \"arguments\": {\"ticker\": \"META\"}}]\n\n        User: How much did PLTR move today?\n        Assistant: [{\"name\": \"get_end_of_day_price\", \"arguments\": {\"ticker\": \"PLTR\"}}]\n\n        User: Did MSFT go up or down at market close today?\n        Assistant: [{\"name\": \"get_end_of_day_price\", \"arguments\": {\"ticker\": \"MSFT\"}}]\n        "
+    ],
+    "reference_tool_calls": [
+      {
+        "name": "get_end_of_day_price",
+        "arguments": {
+          "ticker": "TSLA"
+        }
+      }
+    ],
+    "actual_tool_calls": []
+  },
+  {
+    "user_input": "What is Apple's current stock price?",
+    "response": null,
+    "retrieved_contexts": [
+      "\n        Tool: get_current_price\n        Purpose: Get the real-time live price of a stock or ETF.\n\n        Example conversations:\n        User: What is Apple's stock price right now?\n        Assistant: [{\"name\": \"get_current_price\", \"arguments\": {\"ticker\": \"AAPL\"}}]\n\n        User: How much is Tesla trading at this moment?\n        Assistant: [{\"name\": \"get_current_price\", \"arguments\": {\"ticker\": \"TSLA\"}}]\n\n        User: Give me the live price of NVDA.\n        Assistant: [{\"name\": \"get_current_price\", \"arguments\": {\"ticker\": \"NVDA\"}}]\n\n        User: What's Microsoft trading at?\n        Assistant: [{\"name\": \"get_current_price\", \"arguments\": {\"ticker\": \"MSFT\"}}]\n\n        User: Is SPY up or down right now?\n        Assistant: [{\"name\": \"get_current_price\", \"arguments\": {\"ticker\": \"SPY\"}}]\n\n        User: What is the current price of VOO?\n        Assistant: [{\"name\": \"get_current_price\", \"arguments\": {\"ticker\": \"VOO\"}}]\n\n        User: How much is AMD worth right now?\n        Assistant: [{\"name\": \"get_current_price\", \"arguments\": {\"ticker\": \"AMD\"}}]\n\n        User: Check QQQ live price.\n        Assistant: [{\"name\": \"get_current_price\", \"arguments\": {\"ticker\": \"QQQ\"}}]\n\n        User: What is QS trading at right now?\n        Assistant: [{\"name\": \"get_current_price\", \"arguments\": {\"ticker\": \"QS\"}}]\n\n        User: Give me the real-time price of SOFI.\n        Assistant: [{\"name\": \"get_current_price\", \"arguments\": {\"ticker\": \"SOFI\"}}]\n        "
+    ],
+    "reference_tool_calls": [
+      {
+        "name": "get_current_price",
+        "arguments": {
+          "ticker": "AAPL"
+        }
+      }
+    ],
+    "actual_tool_calls": []
+  },
+  {
+    "user_input": "What has AAPL's stock price looked like over the past 6 months?",
+    "response": null,
+    "retrieved_contexts": [
+      "\n        Tool: get_historical_data\n        Purpose: Get historical price time-series data for analysis over a period of time. get_historical_data returns raw data without a chart. get_historical_data is for any range longer than one day.\n\n        Example conversations:\n        User: Give me Meta's price history for the last 30 days.\n        Assistant: [{\"name\": \"get_historical_data\", \"arguments\": {\"ticker\": \"META\", \"interval\": \"1day\", \"start_date\": \"30 days ago\", \"end_date\": \"today\"}}]\n\n        User: Show me the 52-week high for Spotify.\n        Assistant: [{\"name\": \"get_historical_data\", \"arguments\": {\"ticker\": \"SPOT\", \"interval\": \"1day\", \"start_date\": \"1 year ago\", \"end_date\": \"today\"}}]\n\n        User: Compare SOFI and QS stock prices over the last year.\n        Assistant: [{\"name\": \"get_historical_data\", \"arguments\": {\"ticker\": \"SOFI, QS\", \"interval\": \"1day\", \"start_date\": \"1 year ago\", \"end_date\": \"today\"}}]\n\n        User: What was the high and low for AMD on March 1st 2026?\n        Assistant: [{\"name\": \"get_historical_data\", \"arguments\": {\"ticker\": \"AMD\", \"start_date\": \"2026-03-01\", \"end_date\": \"2026-03-01\"}}]\n\n        User: Get me hourly data for TSLA this week.\n        Assistant: [{\"name\": \"get_historical_data\", \"arguments\": {\"ticker\": \"TSLA\", \"interval\": \"1h\", \"start_date\": \"this week Monday\", \"end_date\": \"today\"}}]\n\n        User: How has VOO performed over the past 5 years?\n        Assistant: [{\"name\": \"get_historical_data\", \"arguments\": {\"ticker\": \"VOO\", \"interval\": \"1day\", \"start_date\": \"5 years ago\", \"end_date\": \"today\"}}]\n\n        User: Show me QQQ's monthly performance for 2024.\n        Assistant: [{\"name\": \"get_historical_data\", \"arguments\": {\"ticker\": \"QQQ\", \"interval\": \"1day\", \"start_date\": \"2024-01-01\", \"end_date\": \"2024-12-31\"}}]\n\n        User: What were NVDA's intraday prices last Monday?\n        Assistant: [{\"name\": \"get_historical_data\", \"arguments\": {\"ticker\": \"NVDA\", \"interval\": \"15min\", \"start_date\": \"last Monday\", \"end_date\": \"last Monday\"}}]\n\n        User: Show me SPY price trend over the last 3 months.\n        Assistant: [{\"name\": \"get_historical_data\", \"arguments\": {\"ticker\": \"SPY\", \"interval\": \"1day\", \"start_date\": \"3 months ago\", \"end_date\": \"today\"}}]\n        "
+    ],
+    "reference_tool_calls": [
+      {
+        "name": "get_historical_data",
+        "arguments": {
+          "ticker": "AAPL",
+          "interval": "1day",
+          "start_date": "6 months ago",
+          "end_date": "today"
+        }
+      }
+    ],
+    "actual_tool_calls": []
+  },
+  {
+    "user_input": "What is the latest news on trade war tariffs and their impact on the broader market?",
+    "response": null,
+    "retrieved_contexts": [
+      "\n        Tool: get_breaking_news\n        Purpose: Fetch breaking world news from Reuters, BBC, WSJ, FT.\n        Use ONLY for active geopolitical events, crises, wars, disasters, or major policy announcements.\n        Do NOT use for stock-specific news or market analysis.\n\n        Example conversations:\n        User: What's happening with the trade war right now?\n        Assistant: [{\"name\": \"get_breaking_news\", \"arguments\": {\"keywords\": \"trade war tariffs\"}}]\n\n        User: Any breaking news about the Middle East?\n        Assistant: [{\"name\": \"get_breaking_news\", \"arguments\": {\"keywords\": \"Middle East conflict\"}}]\n\n        User: What's happening with the earthquake in Japan?\n        Assistant: [{\"name\": \"get_breaking_news\", \"arguments\": {\"keywords\": \"Japan earthquake\"}}]\n\n        User: Is there any news about sanctions on Russia?\n        Assistant: [{\"name\": \"get_breaking_news\", \"arguments\": {\"keywords\": \"Russia sanctions\"}}]\n        "
+    ],
+    "reference_tool_calls": [
+      {
+        "name": "get_breaking_news",
+        "arguments": {
+          "keywords": "trade war tariffs"
+        }
+      }
+    ],
+    "actual_tool_calls": []
+  },
+  {
+    "user_input": "What is the current news sentiment for NVDA, and what are the key recent headlines?",
+    "response": null,
+    "retrieved_contexts": [
+      "\n        Tool: get_news_sentiment\n        Purpose: Fetch recent news and sentiment scores for a company.\n\n        Example conversations:\n        User: Get me Microsoft news sentiment.\n        Assistant: [{\"name\": \"get_news_sentiment\", \"arguments\": {\"ticker\": \"MSFT\"}}]\n\n        User: Gimme the latest news on Disney stock.\n        Assistant: [{\"name\": \"get_news_sentiment\", \"arguments\": {\"ticker\": \"DIS\"}}]\n\n        User: I heard bad things about Starbucks recently, what's the actual news?\n        Assistant: [{\"name\": \"get_news_sentiment\", \"arguments\": {\"ticker\": \"SBUX\"}}]\n\n        User: Check the public opinion and news outlook for Pfizer.\n        Assistant: [{\"name\": \"get_news_sentiment\", \"arguments\": {\"ticker\": \"PFE\"}}]\n\n        User: What are people saying about Palantir in the news?\n        Assistant: [{\"name\": \"get_news_sentiment\", \"arguments\": {\"ticker\": \"PLTR\"}}]\n\n        User: Is the media coverage of Tesla positive or negative lately?\n        Assistant: [{\"name\": \"get_news_sentiment\", \"arguments\": {\"ticker\": \"TSLA\"}}]\n\n        User: Any recent news about Nvidia that could affect stock price?\n        Assistant: [{\"name\": \"get_news_sentiment\", \"arguments\": {\"ticker\": \"NVDA\"}}]\n\n        User: What's the sentiment around Amazon this week?\n        Assistant: [{\"name\": \"get_news_sentiment\", \"arguments\": {\"ticker\": \"AMZN\"}}]\n\n        User: How is the press covering Apple lately?\n        Assistant: [{\"name\": \"get_news_sentiment\", \"arguments\": {\"ticker\": \"AAPL\"}}]\n\n        User: What's the news buzz around SOFI right now?\n        Assistant: [{\"name\": \"get_news_sentiment\", \"arguments\": {\"ticker\": \"SOFI\"}}]\n        "
+    ],
+    "reference_tool_calls": [
+      {
+        "name": "get_news_sentiment",
+        "arguments": {
+          "ticker": "NVDA"
+        }
+      }
+    ],
+    "actual_tool_calls": []
+  },
+  {
+    "user_input": "What did NVDA discuss in their most recent earnings call, including revenue guidance?",
+    "response": null,
+    "retrieved_contexts": [
+      "\n        Tool: get_earnings_call_transcript\n        Purpose: Get earnings call transcript for a company in a specific quarter.\n\n        Example conversations:\n        User: How much money did Google make last quarter?\n        Assistant: [{\"name\": \"get_earnings_call_transcript\", \"arguments\": {\"ticker\": \"GOOGL\", \"quarter\": \"most recent\"}}]\n\n        User: What did Apple say in their Q1 2024 earnings call?\n        Assistant: [{\"name\": \"get_earnings_call_transcript\", \"arguments\": {\"ticker\": \"AAPL\", \"quarter\": \"2024Q1\"}}]\n\n        User: Get me Palantir's latest earnings call transcript.\n        Assistant: [{\"name\": \"get_earnings_call_transcript\", \"arguments\": {\"ticker\": \"PLTR\", \"quarter\": \"most recent\"}}]\n\n        User: What was Amazon's revenue guidance in Q3 2023?\n        Assistant: [{\"name\": \"get_earnings_call_transcript\", \"arguments\": {\"ticker\": \"AMZN\", \"quarter\": \"2023Q3\"}}]\n\n        User: Did MSFT beat earnings last quarter?\n        Assistant: [{\"name\": \"get_earnings_call_transcript\", \"arguments\": {\"ticker\": \"MSFT\", \"quarter\": \"most recent\"}}]\n\n        User: What was Tesla's revenue in Q2 2024?\n        Assistant: [{\"name\": \"get_earnings_call_transcript\", \"arguments\": {\"ticker\": \"TSLA\", \"quarter\": \"2024Q2\"}}]\n\n        User: Get me NVDA's earnings for Q4 2024.\n        Assistant: [{\"name\": \"get_earnings_call_transcript\", \"arguments\": {\"ticker\": \"NVDA\", \"quarter\": \"2024Q4\"}}]\n\n        User: What was Meta's EPS in Q1 2025?\n        Assistant: [{\"name\": \"get_earnings_call_transcript\", \"arguments\": {\"ticker\": \"META\", \"quarter\": \"2025Q1\"}}]\n\n        User: Did AMD exceed expectations in their last earnings report?\n        Assistant: [{\"name\": \"get_earnings_call_transcript\", \"arguments\": {\"ticker\": \"AMD\", \"quarter\": \"most recent\"}}]\n        "
+    ],
+    "reference_tool_calls": [
+      {
+        "name": "get_earnings_call_transcript",
+        "arguments": {
+          "ticker": "NVDA",
+          "quarter": "most recent"
+        }
+      }
+    ],
+    "actual_tool_calls": []
+  },
+  {
+    "user_input": "What are the latest market-wide developments around AI and semiconductors affecting tech stocks?",
+    "response": null,
+    "retrieved_contexts": [
+      "\n        Tool: get_general_news\n        Purpose: Fetch market-wide financial news by topic or sector.\n        Use for broad market topics, NOT for specific company news.\n\n        Topics: blockchain, earnings, ipo, mergers_and_acquisitions, financial_markets,\n        economy_fiscal, economy_monetary, economy_macro, energy_transportation, finance,\n        life_sciences, manufacturing, real_estate, retail_wholesale, technology\n\n        Example conversations:\n        User: What's happening in the tech sector today?\n        Assistant: [{\"name\": \"get_general_news\", \"arguments\": {\"topics\": \"technology\"}}]\n\n        User: Any news about Fed interest rates?\n        Assistant: [{\"name\": \"get_general_news\", \"arguments\": {\"topics\": \"economy_monetary\"}}]\n\n        User: What's the latest on the housing market?\n        Assistant: [{\"name\": \"get_general_news\", \"arguments\": {\"topics\": \"real_estate\"}}]\n\n        User: Any recent IPOs I should know about?\n        Assistant: [{\"name\": \"get_general_news\", \"arguments\": {\"topics\": \"ipo\"}}]\n\n        User: What's going on with oil prices?\n        Assistant: [{\"name\": \"get_general_news\", \"arguments\": {\"topics\": \"energy_transportation\"}}]\n        "
+    ],
+    "reference_tool_calls": [
+      {
+        "name": "get_general_news",
+        "arguments": {
+          "topics": "technology"
+        }
+      }
+    ],
+    "actual_tool_calls": []
+  }
+]
