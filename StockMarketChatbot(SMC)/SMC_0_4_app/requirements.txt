@@ -1,0 +1,7 @@
+streamlit
+ollama
+pandas
+plotly
+feedparser
+requests
+python-dotenv
