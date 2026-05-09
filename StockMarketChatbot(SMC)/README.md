@@ -1,7 +1,7 @@
 # Stock Market Chatbot (SMC)
- **Status: Work in Progress (Active Development)**
+ **Status: Completed Prototype as of 5/9/2026**
 
- * This project is being developed as a Capstone Project for the M.S. in Data Science program at the CUNY School of Professional Studies.*
+ * This project was developed as a Capstone Project for the M.S. in Data Science program at the CUNY School of Professional Studies.*
 
 ## Objective: 
 A locally hosted, RAG-based stock market chatbot designed to autonomously utilize financial APIs. This project prioritizes:
@@ -14,16 +14,23 @@ A locally hosted, RAG-based stock market chatbot designed to autonomously utiliz
 * **Primary Data Source:** [AlphaVantage API](https://www.alphavantage.co/) – Provides real-time financial news and sentiment scoring (Free Tier).
 * **Fallback Data Source:** [TwelveData API](https://twelvedata.com/) – Acts as an autonomous fallback for stock prices, company information, and historical data to handle AlphaVantage rate limits seamlessly.
 
-## Getting Started (Prerequisites):
-  To run this project locally, you will need the following:
+## Getting Started Steps:
+
+To run this project locally, you will need the following:
 
 1. **Local LLM Environment:** * Install [Ollama](https://ollama.com/).
-   * Pull the required model by running: `ollama run qwen3.5:9B` (or your specific model tag).
+   * Pull the required model by running: `ollama run qwen3.5:9B`.
+   * Have Ollama running in the background before launching the chatbot.
 2. **API Keys:** * Users must generate their own free API keys for AlphaVantage and TwelveData. 
    * These keys will be inputted directly into the chatbot interface upon launch.
+   * You may also set the API keys in the .env file to avoid repeatedly entering them.
+3. **Run the "run.bat" script**
 
-## Evaluation:
-The final pipeline and LLM outputs will be rigorously evaluated using the **RAGAS (Retrieval Augmented Generation Assessment)** framework to ensure the retrieved context and generated answers meet strict quality thresholds.
+## SMC 0.4 Release was evaluated using DeepEval against DeepseekV-3.2 and achieved similar scores in the following metrics:
+  * Faithfullness
+  * Tool Correctness
+  * Answer Relevancy
+  * Arugment Correctness
 
 ## 🗺️ Roadmap / Current Status
   * [x] Define architecture and select API tools
