@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.env
+
+# Vector databases / ChromaDB local cache
+chroma_db/
+
+# OS metadata
+.DS_Store
+Thumbs.db
